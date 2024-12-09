@@ -1,0 +1,13 @@
+- name: List GitLab Projects
+  hosts: localhost
+  become: false
+  vars_files:
+    - vars.yaml
+  tasks:
+    - name: Fetch GitLab projects
+      community.general.gitlab_project:
+        api_url: "{{ gitlab_api_url }}"
+        api_token: "{{ gitlab_api_token }}"
+        group: "{{ gitlab_group }}"
+        state: present
+        register: gitlab_projects

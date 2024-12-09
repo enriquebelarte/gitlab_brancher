@@ -1,0 +1,3 @@
+gitlab_api_url: "https://gitlab.com"
+gitlab_api_token: my_super_secret_token
+gitlab_group: redhat/rhel-ai
